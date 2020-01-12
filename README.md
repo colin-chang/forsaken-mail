@@ -1,10 +1,8 @@
-Forsaken-Mail
+Temp Mail
 ==============
-A self-hosted disposable mail service.
+A self-hosted disposable mail service.it can dispose used resources automatically.
 
-[Online Demo](http://disposable.dhc-app.com)
-
-### Installation
+## Installation
 
 #### Setting up your DNS correctly
 
@@ -19,14 +17,18 @@ general way:
 ```
 npm install && npm start
 ```
-if you want to run this inside a docker container
+
+# Docker
 ```
-docker build -t denghongcai/forsaken-mail .
-docker run --name forsaken-mail -d -p 25:25 -p 3000:3000 denghongcai/forsaken-mail
+docker build -t colinchang/tempmail:latest .
+docker run --name forsaken-mail -d -p 25:25 -p 80:3000 colinchang/tempmail
 ```
 Open your browser and type in
 ```
-http://localhost:3000
+http://127.0.0.1
 ```
 
 Enjoy!
+
+#### Thanks
+This repository is forked from [denghongcai/forsaken-mail](https://github.com/denghongcai/forsaken-mail), and I just modify its docker configuration. Thank denghongcai.
