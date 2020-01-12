@@ -1,15 +1,10 @@
-FROM node:latest
-MAINTAINER Hongcai Deng <admin@dhchouse.com>
+FROM node:12.13-alpine
 
-RUN apt-get clean all
-RUN apt-get update
-RUN apt-get -y install git
-RUN git clone https://github.com/denghongcai/forsaken-mail.git /forsaken-mail
+LABEL version="1.0" maintainer="colinchang<zhangcheng5468@gmail.com>"
 
-WORKDIR /forsaken-mail
+COPY src /app
+WORKDIR /app
 
 RUN npm install
-
-EXPOSE 25
-EXPOSE 3000
-CMD npm start
+EXPOSE 25 3000
+ENTRYPOINT npm start

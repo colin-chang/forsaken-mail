@@ -7,7 +7,7 @@ A self-hosted disposable mail service.it can dispose used resources automaticall
 ### General way
 
 ```sh
-npm install && npm start
+cd src && npm install && npm start
 ```
 
 ### Docker
