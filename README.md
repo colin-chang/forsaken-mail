@@ -13,7 +13,7 @@ cd src && npm install && npm start
 ### Docker
 ```sh
 docker build -t colinchang/tempmail:latest .
-docker run --name forsaken-mail -d -p 25:25 -p 80:3000 colinchang/tempmail
+docker run --name mail -d -p 25:25 -p 80:3000 colinchang/tempmail
 ```
 Open your browser and visit http://127.0.0.1
 
